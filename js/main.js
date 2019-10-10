@@ -2,7 +2,7 @@
 
 var names = ['Артемий', 'Ксенья', 'Эдуардо', 'Иван', 'Стивен', 'Константин', 'Олег', 'Дарья', 'Владимир', 'Юлия', 'Дмитрий', 'Николай', 'Елена', 'Алексей', 'Джон', 'Светлана', 'Ангелина', 'Мария', 'Борис', 'Анатолий', 'Гарри', 'Виталий', 'Ольга', 'Нина', 'Молли'];
 var comment = ['Всё отлично!', 'В целом всё неплохо. Но не всё.', 'Когда вы делаете фотографию, хорошо бы убирать палец из кадра.', 'В конце концов это просто непрофессионально.', ' Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.', 'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.', 'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'];
-var desc= ['У меня все отлично', 'Радуюсь', 'Просто крутая картинка', 'Случайно нашел в тырнетах ваших!'];
+var desc = ['У меня все отлично', 'Радуюсь', 'Просто крутая картинка', 'Случайно нашел в тырнетах ваших!'];
 
 var minLikes = 15;
 var maxLikes = 999;
@@ -33,7 +33,7 @@ var getPhoto = function (user, comments, arrayForObject) {
   return arrayForObject;
 };
 
-var getTemplatesElements = function (templateElement, objectsArray,) {
+var getTemplatesElements = function (templateElement, objectsArray) {
   for (var i = 0; i < objectsArray.length; i++) {
     var element = templateElement.cloneNode(true);
     var object = objectsArray[i];
@@ -69,11 +69,11 @@ var onEscKeydown = function (evt) {
   }
 };
 
-var onEnterKeydown  = function (evt) {
-  if (evt.keyCode === CODE_KEY.ENTER) {
-    closeOverlay();
-  }
-};
+// var onEnterKeydown = function (evt) {
+//   if (evt.keyCode === CODE_KEY.ENTER) {
+//     closeOverlay();
+//   }
+// };
 
 var openOverlay = function () {
   formImg.classList.remove('hidden');
